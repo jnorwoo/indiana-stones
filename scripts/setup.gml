@@ -245,6 +245,7 @@ for (var i = 0 ; i < array_length_1d(matchesToDelete_hor) -1; i++;)
             ypos = obj_rooom.lane_que[x/32];
             instance_create(x, ypos * -32,obj_rooom.room_tile_set[random(4)]);
             instance_destroy();
+            score += 50;
            }
        }  
        

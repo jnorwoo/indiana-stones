@@ -32,7 +32,6 @@
     <object>objects\obj_collision</object>
     <object>objects\obj_controller</object>
   </objects>
-  <timelines name="timelines"/>
   <rooms name="rooms">
     <room>rooms\room0</room>
   </rooms>

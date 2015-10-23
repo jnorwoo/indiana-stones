@@ -55,6 +55,8 @@
             <kind>1</kind>
             <string>last_room_state = 1; // tracks if the tile was outside the room 
 current_room_state = 1; // tracks if the tile is currently inside the room. 
+fall_speed = 4; // has to cleanly divide into 32 i.e. 32/ 4 = 8 remainder of 0 3 will not work
+
 </string>
           </argument>
         </arguments>
@@ -137,9 +139,9 @@ current_room_state = 1; // tracks if the tile is currently inside the room.
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_free(x, y + 1)
+            <string>if place_free(x, y + fall_speed)
 {
-  y += 1;
+  y += fall_speed;
 }
 if x &gt; room_width or x &lt; 0 or y &gt; room_height or  y &lt; 0
 {

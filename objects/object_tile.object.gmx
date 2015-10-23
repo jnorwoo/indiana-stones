@@ -223,14 +223,19 @@ last_room_state = current_room_state;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>current_tile.visible = false;
-lastx = x;
-lasty = y;
-x = obj_player.tile_source.x;
-y = obj_player.tile_source.y;
-obj_player.tile_source.x = lastx;
-obj_player.tile_source.y = lasty;
-show_debug_message("released");
+            <string>
+if (instance_exists(obj_player.tile_source ))
+{
+    current_tile.visible = false;
+    lastx = x;
+    lasty = y;
+    x = obj_player.tile_source.x;
+    y = obj_player.tile_source.y;
+    obj_player.tile_source.x = lastx;
+    obj_player.tile_source.y = lasty;
+    show_debug_message("released");
+}
+
 </string>
           </argument>
         </arguments>

@@ -29,6 +29,7 @@
 var tile_destination_x;
 var tile_destination_y;
 yplace = 170;
+selectFlag = false;
 </string>
           </argument>
         </arguments>

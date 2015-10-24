@@ -5,15 +5,14 @@ worklist = ds_stack_create();
 current_inst = instance_position(x , y, object_tile);
 ds_list_add(match, current_inst);
  
-find_nodes(worklist,match,notmatch,current_inst);
-//show_debug_message( ds_list_size(match));
-find_matches(match);
+find_nodes();
+find_matches();
 
 #define find_nodes
-worklist = argument0;
-match = argument1;
-notmatch = argument2;
-current_inst = argument3;
+//worklist1 = argument0;
+//match1 = argument1;
+//notmatch1 = argument2;
+//current_inst1 = argument3;
 
 left_inst = instance_position(current_inst.x  - 32, current_inst.y, object_tile);
 top_inst = instance_position(current_inst.x , current_inst.y - 32, object_tile);
@@ -84,7 +83,7 @@ while (!ds_stack_empty(worklist))
 }
 
 #define find_matches
-match = argument0
+//match = argument0
 var matchesDelete;
 matchesDelete[0] = 0;
 for (var i = 0 ; i <  ds_list_size(match); i++;)
@@ -239,21 +238,25 @@ return arr;
 
 matchesToDelete_hor = argument0;
 for (var i = 0 ; i < array_length_1d(matchesToDelete_hor) -1; i++;)
-    {  
-        if (instance_exists(matchesToDelete_hor[i]))
-        {
-           with (matchesToDelete_hor[i])
-           {
+{  
+    if (instance_exists(matchesToDelete_hor[i]))
+    {
+       with (matchesToDelete_hor[i])
+       {
 
-           
-            instance_destroy();
-            
-            //add 50 to score for each block
-            score += 50;
-           }
-       }  
        
-    }
+        instance_destroy();
+        
+        //add 50 to score for each block
+        score += 50;
+       }
+   }  
+   
+}
+//delete the list stucts
+ds_list_destroy(match);
+ds_list_destroy(notmatch);
+ds_stack_destroy(worklist);
 
 
 #define rmdup

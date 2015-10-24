@@ -127,7 +127,7 @@ score_bar = 0;
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="9">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>702</id>

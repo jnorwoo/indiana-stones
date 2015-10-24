@@ -64,6 +64,7 @@ repeat(3)
     rand_tile = instance_nearest( random(192), random(192), randbrick);
     with (rand_tile)
     {
+        destroy_kind = ef_ring;
         //change tile to a disruption tile
         instance_change(other.room_disrupt[0], true);
     }

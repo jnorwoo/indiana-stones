@@ -30,12 +30,47 @@ room_tile_set[1] = obj_tile_grass;
 room_tile_set[2] = obj_tile_water;
 room_tile_set[3] = obj_tile_psychic;
 tile0_debouncer = 1;
-lane_que[0] = 0;
-lane_que[1] = 0;
-lane_que[2] = 0;
-lane_que[3] = 0;
-lane_que[4] = 0;
-lane_que[5] = 0;
+room_disrupt[0] = obj_tile_brick;
+
+//every couple of cause a disruption
+alarm[1] = 30 * (random(5) +  5);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>randbrick =  room_tile_set[random(4)]
+//get random tile
+repeat(3)
+{
+    show_debug_message("disruption");
+    rand_tile = instance_nearest( random(192), random(192), randbrick);
+    with (rand_tile)
+    {
+        //change tile to a disruption tile
+        instance_change(other.room_disrupt[0], true);
+    }
+}
+
+//reset disruption
+alarm[1] = 30 * (random(5) +  5);
 </string>
           </argument>
         </arguments>

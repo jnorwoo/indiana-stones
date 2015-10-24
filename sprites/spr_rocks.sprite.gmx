@@ -8,7 +8,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>30</bbox_right>
+  <bbox_right>31</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>31</bbox_bottom>
   <HTile>0</HTile>
@@ -74,5 +74,59 @@
     <frame index="51">images\spr_rocks_51.png</frame>
     <frame index="52">images\spr_rocks_52.png</frame>
     <frame index="53">images\spr_rocks_53.png</frame>
+    <frame index="54">images\spr_rocks_54.png</frame>
+    <frame index="55">images\spr_rocks_55.png</frame>
+    <frame index="56">images\spr_rocks_56.png</frame>
+    <frame index="57">images\spr_rocks_57.png</frame>
+    <frame index="58">images\spr_rocks_58.png</frame>
+    <frame index="59">images\spr_rocks_59.png</frame>
+    <frame index="60">images\spr_rocks_60.png</frame>
+    <frame index="61">images\spr_rocks_61.png</frame>
+    <frame index="62">images\spr_rocks_62.png</frame>
+    <frame index="63">images\spr_rocks_63.png</frame>
+    <frame index="64">images\spr_rocks_64.png</frame>
+    <frame index="65">images\spr_rocks_65.png</frame>
+    <frame index="66">images\spr_rocks_66.png</frame>
+    <frame index="67">images\spr_rocks_67.png</frame>
+    <frame index="68">images\spr_rocks_68.png</frame>
+    <frame index="69">images\spr_rocks_69.png</frame>
+    <frame index="70">images\spr_rocks_70.png</frame>
+    <frame index="71">images\spr_rocks_71.png</frame>
+    <frame index="72">images\spr_rocks_72.png</frame>
+    <frame index="73">images\spr_rocks_73.png</frame>
+    <frame index="74">images\spr_rocks_74.png</frame>
+    <frame index="75">images\spr_rocks_75.png</frame>
+    <frame index="76">images\spr_rocks_76.png</frame>
+    <frame index="77">images\spr_rocks_77.png</frame>
+    <frame index="78">images\spr_rocks_78.png</frame>
+    <frame index="79">images\spr_rocks_79.png</frame>
+    <frame index="80">images\spr_rocks_80.png</frame>
+    <frame index="81">images\spr_rocks_81.png</frame>
+    <frame index="82">images\spr_rocks_82.png</frame>
+    <frame index="83">images\spr_rocks_83.png</frame>
+    <frame index="84">images\spr_rocks_84.png</frame>
+    <frame index="85">images\spr_rocks_85.png</frame>
+    <frame index="86">images\spr_rocks_86.png</frame>
+    <frame index="87">images\spr_rocks_87.png</frame>
+    <frame index="88">images\spr_rocks_88.png</frame>
+    <frame index="89">images\spr_rocks_89.png</frame>
+    <frame index="90">images\spr_rocks_90.png</frame>
+    <frame index="91">images\spr_rocks_91.png</frame>
+    <frame index="92">images\spr_rocks_92.png</frame>
+    <frame index="93">images\spr_rocks_93.png</frame>
+    <frame index="94">images\spr_rocks_94.png</frame>
+    <frame index="95">images\spr_rocks_95.png</frame>
+    <frame index="96">images\spr_rocks_96.png</frame>
+    <frame index="97">images\spr_rocks_97.png</frame>
+    <frame index="98">images\spr_rocks_98.png</frame>
+    <frame index="99">images\spr_rocks_99.png</frame>
+    <frame index="100">images\spr_rocks_100.png</frame>
+    <frame index="101">images\spr_rocks_101.png</frame>
+    <frame index="102">images\spr_rocks_102.png</frame>
+    <frame index="103">images\spr_rocks_103.png</frame>
+    <frame index="104">images\spr_rocks_104.png</frame>
+    <frame index="105">images\spr_rocks_105.png</frame>
+    <frame index="106">images\spr_rocks_106.png</frame>
+    <frame index="107">images\spr_rocks_107.png</frame>
   </frames>
 </sprite>

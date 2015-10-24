@@ -184,27 +184,8 @@ score_bar = 0;
             <kind>1</kind>
             <string>level += 1;
 level_target = 200 * level;
+show_debug_message("Leveled UP!");
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>321</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_message</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>2</kind>
-            <string>Level up</string>
           </argument>
         </arguments>
       </action>
@@ -307,27 +288,9 @@ level_target = 200 * level;
           <argument>
             <kind>1</kind>
             <string>x = 1; 
+lost_message = "Game over! Highest Level = " + string(level);
+show_message(lost_message);
 </string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>321</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>0</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_message</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>2</kind>
-            <string>You lost</string>
           </argument>
         </arguments>
       </action>
@@ -537,7 +500,8 @@ level_target = 200 * level;
             <kind>1</kind>
             <string>score_bar = (score / level_target) * 100;
 draw_healthbar(0, 192, 192 -64, 224, score_bar, c_black, c_red, c_lime, 0, true, true)
-draw_text(192 - 64 ,192,level_target);
+level_text = "lvl " + string(level);
+draw_text(192 - 64 + 10 ,192,level_text);
 </string>
           </argument>
         </arguments>

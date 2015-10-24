@@ -53,8 +53,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>last_room_state = 1; // tracks if the tile was outside the room 
-current_room_state = 1; // tracks if the tile is currently inside the room. 
+            <string>
 fall_speed = 4; // has to cleanly divide into 32 i.e. 32/ 4 = 8 remainder of 0 3 will not work
 
 </string>
@@ -143,20 +142,7 @@ fall_speed = 4; // has to cleanly divide into 32 i.e. 32/ 4 = 8 remainder of 0 3
 {
   y += fall_speed;
 }
-if x &gt; room_width or x &lt; 0 or y &gt; room_height or  y &lt; 0
-{
-//outside room
-    current_room_state = 0;
-}
-else{
-    current_room_state = 1;
-}
-if (last_room_state == 0 and current_room_state == 1)
-{
-// tile was previously outside room but now in room
-    obj_rooom.lane_que[x/32] -= 1; // you should be able to spawn new blocks closer to the screen without seeing another block
-}
-last_room_state = current_room_state;
+
 </string>
           </argument>
         </arguments>

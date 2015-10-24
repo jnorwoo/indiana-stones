@@ -240,11 +240,23 @@ for (var i = 0 ; i < array_length_1d(matchesToDelete_hor) -1; i++;)
         {
            with (matchesToDelete_hor[i])
            {
-            //lane y position
-            obj_rooom.lane_que[x/32] += 1;
-            ypos = obj_rooom.lane_que[x/32];
-            instance_create(x, ypos * -32,obj_rooom.room_tile_set[random(4)]);
+
+            
+            //psychic tile gives heals you one second
+            //should rename psychic tile to something more suitable
+            if (object_index == obj_tile_psychic)
+                health += 3;
+                
+            //find the free space to spawn a new block
+            ypos = -32
+            while (not( place_free(x,  ypos) and place_free(x, ypos + 31)))
+            {
+                ypos += -32
+            }
+            instance_create(x, ypos,obj_rooom.room_tile_set[random(4)]);
             instance_destroy();
+            
+            //add 50 to score for each block
             score += 50;
            }
        }  

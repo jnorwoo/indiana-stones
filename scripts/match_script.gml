@@ -232,28 +232,20 @@ repeat (array_length_1d(add)) {
 return arr;
 
 #define destroyMatches
+
+// goes through each matches in the list of matches to delete
+//and destroys them
+
+
 matchesToDelete_hor = argument0;
 for (var i = 0 ; i < array_length_1d(matchesToDelete_hor) -1; i++;)
-    {
-    //show_debug_message(instance_exists(matchesToDelete_hor[i]));   
+    {  
         if (instance_exists(matchesToDelete_hor[i]))
         {
            with (matchesToDelete_hor[i])
            {
 
-            
-            //psychic tile gives heals you one second
-            //should rename psychic tile to something more suitable
-            if (object_index == obj_tile_psychic)
-                health += 3;
-                
-            //find the free space to spawn a new block
-            ypos = -32
-            while (not( place_free(x,  ypos) and place_free(x, ypos + 31)))
-            {
-                ypos += -32
-            }
-            instance_create(x, ypos,obj_rooom.room_tile_set[random(4)]);
+           
             instance_destroy();
             
             //add 50 to score for each block

@@ -1,13 +1,16 @@
 #define match_script
-match = ds_list_create();
-notmatch = ds_list_create();
-worklist = ds_stack_create();
-var score_tot = 0;
-current_inst = instance_position(x , y, object_tile);
-ds_list_add(match, current_inst);
- 
-find_nodes();
-find_matches();
+if ( y >= 0)
+{
+    match = ds_list_create();
+    notmatch = ds_list_create();
+    worklist = ds_stack_create();
+    var score_tot = 0;
+    current_inst = instance_position(x , y, object_tile);
+    ds_list_add(match, current_inst);
+     
+    find_nodes();
+    find_matches();
+}
 
 #define find_nodes
 //worklist1 = argument0;

@@ -2,6 +2,7 @@
 match = ds_list_create();
 notmatch = ds_list_create();
 worklist = ds_stack_create();
+var score_tot = 0;
 current_inst = instance_position(x , y, object_tile);
 ds_list_add(match, current_inst);
  
@@ -86,6 +87,10 @@ while (!ds_stack_empty(worklist))
 //match = argument0
 var matchesDelete;
 matchesDelete[0] = 0;
+var score_tot;
+score_tot = 0;
+var score_base;
+score_base = 40 + (obj_controller.level * 15);
 for (var i = 0 ; i <  ds_list_size(match); i++;)
 {
    with (match[|i])
@@ -95,16 +100,21 @@ for (var i = 0 ; i <  ds_list_size(match); i++;)
      
      if ( is_array(hor))
      {
+        matches_hor = array_length_1d(hor);
+        score_tot += (((matches_hor - 3) * .5) + 1)  * score_base;
         matchesDelete = array_merge( hor,matchesDelete);
         
      }
      if ( is_array(ver))
      {
+        matches_ver = array_length_1d(ver);
+        score_tot += (((matches_ver - 3) * .5) + 1)  * score_base;
         matchesDelete = array_merge(ver, matchesDelete);
      }
    } 
 }
 matchesDelete = rmdup(matchesDelete);
+score += score_tot;
 //show_debug_message(matchesDelete);
 destroyMatches(matchesDelete);
 
@@ -157,6 +167,7 @@ while (onlyMatchesFound_hor)
 
 if (matches_hor >= 3)
             {
+                
                 //show_debug_message(array_length_1d(matchesToDelete_hor));
                 matchesToDelete_hor[array_length_1d(matchesToDelete_hor)] = id;
                 return matchesToDelete_hor;
@@ -212,6 +223,7 @@ while (onlyMatchesFound_ver)
 
 if (matches_ver >= 3)
             {
+                
                 //show_debug_message(array_length_1d(matchesToDelete_ver));
                 matchesToDelete_ver[array_length_1d(matchesToDelete_ver)] = id;
                 return matchesToDelete_ver;
@@ -246,9 +258,8 @@ for (var i = 0 ; i < array_length_1d(matchesToDelete_hor) -1; i++;)
 
        
         instance_destroy();
+
         
-        //add 50 to score for each block
-        score += 50;
        }
    }  
    

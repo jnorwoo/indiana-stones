@@ -83,7 +83,7 @@ while (not( place_free(x,  ypos) and place_free(x, ypos + 31)))
 {
     ypos += -32
 }
-instance_create(x, ypos,obj_rooom.room_tile_set[random(4)]);
+instance_create(x, ypos,obj_room.room_tile_set[random(4)]);
 
 
 effect_create_above(destroy_kind, x + 16, y + 16,.5, c_white);

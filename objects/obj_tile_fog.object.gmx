@@ -50,7 +50,7 @@
           </argument>
           <argument>
             <kind>0</kind>
-            <string>30</string>
+            <string>5</string>
           </argument>
           <argument>
             <kind>0</kind>
@@ -59,7 +59,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="1" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -77,8 +77,13 @@
           <argument>
             <kind>1</kind>
             <string>event_inherited();
-obj_room.fog = 0;
-obj_room.alarm[2] = 30 * 3; // three seconds you will not see fog
+if (obj_room.fog)
+{
+    if !irandom(9)
+       {
+    effect_create_above(ef_cloud, x + 16, y + 16,0, c_white);
+    }
+}
 </string>
           </argument>
         </arguments>

@@ -8,15 +8,16 @@ if ( y >= 0)
     current_inst = instance_position(x , y, object_tile);
     ds_list_add(match, current_inst);
      
-    find_nodes();
+    //find_nodes();
+    find_nodes(worklist,match,notmatch,current_inst);
     find_matches();
 }
 
 #define find_nodes
-//worklist1 = argument0;
-//match1 = argument1;
-//notmatch1 = argument2;
-//current_inst1 = argument3;
+worklist = argument0;
+match = argument1;
+notmatch = argument2;
+current_inst = argument3;
 
 left_inst = instance_position(current_inst.x  - 32, current_inst.y, object_tile);
 top_inst = instance_position(current_inst.x , current_inst.y - 32, object_tile);
@@ -100,9 +101,10 @@ for (var i = 0 ; i <  ds_list_size(match); i++;)
    {
      hor = hor_check();
      ver = ver_check();
-     
+     crossType = 0; // checks to see if you make a cross match
      if ( is_array(hor))
      {
+        crossType += 1;
         matches_hor = array_length_1d(hor);
         score_tot += (((matches_hor - 3) * .5) + 1)  * score_base;
         matchesDelete = array_merge( hor,matchesDelete);
@@ -110,9 +112,14 @@ for (var i = 0 ; i <  ds_list_size(match); i++;)
      }
      if ( is_array(ver))
      {
+        crossType += 1;
         matches_ver = array_length_1d(ver);
         score_tot += (((matches_ver - 3) * .5) + 1)  * score_base;
         matchesDelete = array_merge(ver, matchesDelete);
+     }
+     if (crossType >= 2)
+     {
+        score_tot *= 1.25;
      }
    } 
 }

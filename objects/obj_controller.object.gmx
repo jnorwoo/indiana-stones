@@ -130,7 +130,7 @@ time_int = 15; //100 /x =  x= time inerval  10 ten seconds per level = 100 / 10
         </arguments>
       </action>
     </event>
-    <event eventtype="7" enumb="9">
+    <event eventtype="7" enumb="10">
       <action>
         <libid>1</libid>
         <id>702</id>

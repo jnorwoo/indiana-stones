@@ -79,7 +79,7 @@
             <string>event_inherited();
 if (obj_room.fog)
 {
-    if !irandom(9)
+    if !irandom(15)
        {
     effect_create_above(ef_cloud, x + 16, y + 16,0, c_white);
     }

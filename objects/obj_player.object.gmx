@@ -25,7 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>var tile_source;
+            <string>
+tile_source = noone;
 var tile_destination_x;
 var tile_destination_y;
 yplace = 170;

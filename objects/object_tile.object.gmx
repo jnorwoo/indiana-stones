@@ -243,7 +243,7 @@ if (instance_exists(obj_player.tile_source ))
             <kind>1</kind>
             <string>current_tile.visible = true;
 current_tile.image_index = image_index;
-obj_player.tile_source = instance_position(mouse_x, mouse_y, object_tile);
+obj_player.tile_source = id;
 
 </string>
           </argument>

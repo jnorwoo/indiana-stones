@@ -24,9 +24,7 @@
   </datafiles>
   <NewExtensions>
     <extension index="0">extensions\Speech Bubble</extension>
-    <extension index="1">extensions\Jazzy Pack I</extension>
-    <extension index="2">extensions\Epic Battle</extension>
-    <extension index="3">extensions\Pause Extension</extension>
+    <extension index="1">extensions\Pause Extension</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -48,6 +46,7 @@
       <script>scripts\game_resume.gml</script>
       <script>scripts\game_is_paused.gml</script>
     </scripts>
+    <script>scripts\add_disrupt.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_messagebox</font>

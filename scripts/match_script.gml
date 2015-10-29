@@ -156,7 +156,7 @@ while (onlyMatchesFound_hor)
 
     if (last_inst != noone)
     {
-        if (last_inst.object_index == object_index)
+        if (last_inst.object_index == object_index and not last_inst.falling and not falling)
         {
             matchesToDelete_hor[xoffset_hor - 1] = last_inst;
             matches_hor += 1;
@@ -212,7 +212,7 @@ while (onlyMatchesFound_ver)
 
     if (last_inst != noone)
     {
-        if (last_inst.object_index == object_index)
+        if (last_inst.object_index == object_index and not last_inst.falling and not falling)
         {
             matchesToDelete_ver[xoffset_ver - 1] = last_inst;
             matches_ver += 1;

@@ -3,28 +3,11 @@
   <Configs name="configs">
     <Config>Configs\Default</Config>
   </Configs>
-  <datafiles number="1" name="datafiles">
-    <datafile>
-      <name>PE_example_project.gmz</name>
-      <exists>-1</exists>
-      <size>1120296</size>
-      <exportAction>2</exportAction>
-      <exportDir></exportDir>
-      <overwrite>0</overwrite>
-      <freeData>-1</freeData>
-      <removeEnd>0</removeEnd>
-      <store>0</store>
-      <ConfigOptions>
-        <Config name="Default">
-          <CopyToMask>9223372036854775807</CopyToMask>
-        </Config>
-      </ConfigOptions>
-      <filename>PE_example_project.gmz</filename>
-    </datafile>
-  </datafiles>
+  <datafiles number="2" name="datafiles"/>
   <NewExtensions>
     <extension index="0">extensions\Speech Bubble</extension>
     <extension index="1">extensions\Pause Extension</extension>
+    <extension index="2">extensions\Destron Media LLC</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -76,10 +59,11 @@
       <object>objects\obj_pause_3d</object>
       <object>objects\parent_dont_pause</object>
     </objects>
+    <object>objects\objGameOver</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
-    <room>rooms\rm_tutorial</room>
+    <room>rooms\gameover</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

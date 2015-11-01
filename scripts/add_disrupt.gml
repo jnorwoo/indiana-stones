@@ -1,5 +1,5 @@
 
-    obj_room.room_disrupt[1] = obj_tile_metal;
+    obj_room.room_disrupt[array_length_1d(obj_room.room_disrupt)] = argument1; 
     show_message(argument0);
     randbrick =  obj_room.room_tile_set[random(4)]
     rand_tile = instance_nearest( random(192), random(192), randbrick);

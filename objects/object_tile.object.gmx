@@ -56,6 +56,7 @@
             <string>falling = 1;
 fall_speed = 4; // has to cleanly divide into 32 i.e. 32/ 4 = 8 remainder of 0 3 will not work
 destroy_kind = ef_explosion;
+destroy_sound = 1;
 </string>
           </argument>
         </arguments>
@@ -87,8 +88,35 @@ instance_create(x, ypos,obj_room.room_tile_set[random(4)]);
 
 
 effect_create_above(destroy_kind, x + 16, y + 16,.5, c_white);
-
+if (destroy_sound)
+{
+    audio_play_sound(blockdestroy, 10, false);
+    }
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>blockdestroy</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>
@@ -220,6 +248,30 @@ if (instance_exists(obj_player.tile_source ))
 }
 
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>select</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>0</string>
           </argument>
         </arguments>
       </action>

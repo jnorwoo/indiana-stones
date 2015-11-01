@@ -45,6 +45,30 @@ first_disrupt = 1;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>211</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sound</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>6</kind>
+            <sound>gamemusic</sound>
+          </argument>
+          <argument>
+            <kind>3</kind>
+            <string>1</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="2" enumb="2">
       <action>
@@ -101,6 +125,7 @@ repeat(3)
     with (rand_tile)
     {
         destroy_kind = ef_ring;
+        destroy_sound = 0;
         //change tile to a disruption tile
         instance_change(other.room_disrupt[random( array_length_1d(other.room_disrupt))], true);
     }
@@ -108,6 +133,7 @@ repeat(3)
 
 //reset disruption
 alarm[1] = 30 * (random(5) +  5);
+audio_play_sound(sound3, 10, false);
 </string>
           </argument>
         </arguments>

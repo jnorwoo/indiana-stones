@@ -28,7 +28,7 @@
             <string>level_target = 500;
 level = 1;
 score_bar = 0;
-time_int = 3; //100 /x =  x= time inerval  10 ten seconds per level = 100 / 10
+time_int = 15; //100 /x =  x= time inerval  10 ten seconds per level = 100 / 10
 no_death = 0;
 
 </string>

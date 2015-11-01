@@ -8,8 +8,14 @@
     <extension index="0">extensions\Speech Bubble</extension>
     <extension index="1">extensions\Pause Extension</extension>
     <extension index="2">extensions\Destron Media LLC</extension>
+    <extension index="3">extensions\Jazzy Pack I</extension>
   </NewExtensions>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\gamemusic</sound>
+    <sound>sound\select</sound>
+    <sound>sound\blockdestroy</sound>
+    <sound>sound\sound3</sound>
+  </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_rocks</sprite>
     <sprite>sprites\spr_box</sprite>
@@ -45,12 +51,12 @@
       <object>objects\obj_tile_grass</object>
       <object>objects\obj_tile_water</object>
       <object>objects\obj_tile_psychic</object>
+      <object>objects\obj_collision</object>
       <object>objects\obj_tile_brick</object>
       <object>objects\obj_tile_fog</object>
       <object>objects\obj_tile_metal</object>
     </objects>
     <object>objects\current_tile</object>
-    <object>objects\obj_collision</object>
     <object>objects\obj_controller</object>
     <object>objects\oButtonBasic</object>
     <object>objects\oTutorialClickable</object>

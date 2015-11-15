@@ -330,9 +330,27 @@ if (level == 2)
 }
 else if (level == 3)
 {
+    
     tut_message = "yellow fog disruption tiles produce a cloud thats hard to see. Match Blue tiles to clear away the fog!";
     add_disrupt(tut_message, obj_tile_fog);
     //room_disrupt[2] = obj_tile_fog;
+}
+
+if (level % 5 == 0) //every five level introduce the boss wave
+{
+    show_message("boss wave!");
+    with (obj_room)
+    {
+        instance_change(obj_room_row, true);
+    }
+}
+else if (level % 5 == 1)
+{
+    show_message("boss wave");
+    with (obj_room)
+    {
+        instance_change(obj_room, true);
+    }
 }
 show_debug_message(level);
 </string>
@@ -674,6 +692,43 @@ level_text = "lvl " + string(level);
 draw_text(192 - 64 + 10 ,192,level_text);
 Points_text = "Points: " + string(score) + "/" + string(level_target);
 draw_text(0 ,224,Points_text);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="9" enumb="68">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+health -= 20;
+repeat(3)
+{
+    show_debug_message("disruption");
+    rand_tile = instance_nearest( random(192), random(192), obj_tile_fire);
+    with (rand_tile)
+    {
+        destroy_kind = ef_ring;
+        destroy_sound = 0;
+        //change tile to a disruption tile
+        instance_change(obj_super_fire, true);
+    }
+}
+
 </string>
           </argument>
         </arguments>

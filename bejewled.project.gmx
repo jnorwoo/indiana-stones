@@ -43,11 +43,13 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_room</object>
+    <object>objects\obj_room_row</object>
     <objects name="object tiles">
       <object>objects\object_tile</object>
       <object>objects\obj_nonMove_tile</object>
       <object>objects\obj_tile_ground</object>
       <object>objects\obj_tile_fire</object>
+      <object>objects\obj_super_fire</object>
       <object>objects\obj_tile_grass</object>
       <object>objects\obj_tile_water</object>
       <object>objects\obj_tile_psychic</object>
@@ -70,6 +72,7 @@
   <rooms name="rooms">
     <room>rooms\room0</room>
     <room>rooms\gameover</room>
+    <room>rooms\room5</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
